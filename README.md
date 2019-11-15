@@ -8,7 +8,7 @@ Creación de un simple CRUD con Hapi, Adonis y Express;
     const Hapi = require('@hapi/hapi');
     ```
 
-    - Con la api *server* te pide pasar por parámetro un objeto especificando el nro de puerto y el host.
+    - Con la api *server* te pide pasar por parámetro un objeto especificando el número de puerto y el host.
 
     ```js
     const server = Hapi.server({
@@ -62,7 +62,7 @@ Creación de un simple CRUD con Hapi, Adonis y Express;
         return data;
     })
     ```
-    - Para mandar datos en el path, Adonis trabaja como Express. Por ejemmplo para le id, sería ':id'. Y para leerlo debemos llamar a 'params' dentro del handler.
+    - Para mandar datos en el path, Adonis trabaja como Express. Por ejemplo: para el id, sería ':id'. Y para leerlo debemos llamar a 'params' dentro del handler.
     ```js
     Route.get('/products/:id', ({ params }) => {
         const id = params.id;
@@ -95,13 +95,13 @@ Creación de un simple CRUD con Hapi, Adonis y Express;
     })
     ```
 - Para el routes:
-    - Express nos provee apis con los mismos nombres de los verbos, a los cuales les pasaremos por parámetro el path y un handler. Solo retornas tu data.
+    - Express nos provee apis con los mismos nombres de los verbos, a los cuales les pasaremos por parámetro el path y un handler. Sólo retornas tu data.
     ```js
     app.get('/products', (req, res) => {
         res.send(data);
     })
     ```
-    - Para definir el id como parámetro dentro del path, usamos :id y para trabajarlo en el handler, lo encontraremos dentro del req.params
+    - Para definir el id como parámetro dentro del path, usamos :id y para trabajarlo en el handler, lo encontraremos en req.params
     ```js
     app.get('/products/:id', (req, res) => {
         const id = req.params.id;
@@ -130,6 +130,6 @@ Creación de un simple CRUD con Hapi, Adonis y Express;
 
 ### Express
 - Adonis y Express tienen una sintaxis marcada a la hora de settear rutas y trabajar con los verbos. Me parece que Hapi es más sencillo pero que Express, sería ideal para aprender conceptos generales, que ayudarían a entender otras tecnologías.
-s
+
 #### Disclaimer
 - Todo lo escrito aquí es en base a la hora de hacer un simple CRUD con Nodejs. A medida que crezcan los proyectos las valoraciones pueden variar.
